@@ -43,8 +43,8 @@ const addCourse = async (req, res) => {
             return res.status(400).json({ message: "Main course and at least one sub-course are required" });
         }
         for (let subCourse of subCourses) {
-            const { name, subjects, teacher, language, classLevel, videos } = subCourse;
-            if (!name || !subjects || !teacher || !language || !classLevel || !videos) {
+            const { name, subjects, teacher, language, classLevel, description,videos } = subCourse;
+            if (!name || !subjects || !teacher || !language || !classLevel || !description || !videos) {
                 return res.status(400).json({ message: "All sub-course fields are required" });
             }
         }
@@ -59,6 +59,10 @@ const addCourse = async (req, res) => {
     }
 };
 export default addCourse;
+
+
+
+
 
 
 

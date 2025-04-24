@@ -7,6 +7,7 @@ const courseData= new mongoose.Schema({
           teacher: { type: String, required: true }, 
           language: { type: String, required: true }, 
           classLevel: { type: String }, 
+          description:{type:String},
           videos: [{ type: String }] 
       }]
   });
