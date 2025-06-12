@@ -7,7 +7,7 @@ import courseRouter from "./routes/route.js";
 
 dotenv.config();
 const app = express();
-const port = process.env.PORT || 5000; 
+const port = process.env.PORT; 
 const mongoURI = process.env.MONGODB_URL;
 mongoose.connect(mongoURI)
 .then(() => {
